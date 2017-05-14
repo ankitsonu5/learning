@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app='calcultor'>
+<head>
+	<title>First Angular JS Application</title>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js" type="text/javascript" charset="utf-8">
+		
+	</script>
+
+<script>
+
+	var app=angular.module("calcultor",[]);
+	app.controller("MainControl",["$scope", function($scope) {
+		$scope.totalValue=0;
+
+		$scope.myvalue=function(k) {
+			$scope.totalValue+=k;
+		}
+		$scope.calculate=function() {
+		     $scope.totalValue = eval($scope.totalValue) ;
+		  }
+
+	}]);
+
+
+</script>
+</head>
+<body ng-controller="MainControl">
+<h1>Ttoal <span ng-bind="totalValue"> </span></h1>
+<table width="156" border="0">
+  <tbody>
+    <tr>
+      <td colspan="4">
+      
+      </td>
+    </tr>
+    <tr>
+      <td width="31"><button ng-click="myvalue(7);" value="7">7</button></td>
+      <td width="32"><button ng-click="myvalue(8);" value="8">8</button></td>
+      <td width="29"><button ng-click="myvalue(9);" value="9">9</button></td>
+      <td width="29"><button ng-click="myvalue('+');" value="+">+</button></td>
+    </tr>
+    <tr>
+      <td><button ng-click="myvalue(4);"  value="4">4</button></td>
+      <td><button ng-click="myvalue(5);" value="5">5</button></td>
+      <td><button ng-click="myvalue(6);"  value="6">6</button></td>
+      <td><button ng-click="myvalue('-');"  style="width:25" value="-">-</button></td>
+    </tr>
+    <tr>
+      <td><button ng-click="myvalue(1);"  value="1">1</button></td>
+      <td><button ng-click="myvalue(2);"  value="2">2</button></td>
+      <td><button ng-click="myvalue(3);"  value="3">3</button></td>
+      <td><button ng-click="myvalue('*');"  value="*">*</button></td>
+    </tr>
+     <tr>
+      <td colspan="2"><button ng-click="calculate();" style="width:80px;" value="=">=</button></td>
+        <td><button ng-click="myvalue('.');"  value=".">.</button></td>
+      <td><button ng-click="myvalue('%');"  value="%">%</button></td>
+    </tr>
+    
+  </tbody>
+</table>
+
+</body>
+</html>
