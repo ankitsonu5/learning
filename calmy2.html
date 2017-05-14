@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+ <table width="156" border="0">
+  <tbody>
+    <tr>
+      <td colspan="4"><input width="150" id="inputbox" name="result"  type="text"></td>
+    </tr>
+    <tr>
+      <td width="31"><button onclick="myvalue(7);" value="7">7</button></td>
+      <td width="32"><button onclick="myvalue(8);" value="8">8</button></td>
+      <td width="29"><button onclick="myvalue(9);" value="9">9</button></td>
+      <td width="29"><button onclick="myvalue('+');" value="+">+</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="myvalue(4);"  value="4">4</button></td>
+      <td><button onclick="myvalue(5);" value="5">5</button></td>
+      <td><button onclick="myvalue(6);"  value="6">6</button></td>
+      <td><button onclick="myvalue('-');"  style="width:25" value="-">-</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="myvalue(1);"  value="1">1</button></td>
+      <td><button onclick="myvalue(2);"  value="2">2</button></td>
+      <td><button onclick="myvalue(3);"  value="3">3</button></td>
+      <td><button onclick="myvalue('*');"  value="*">*</button></td>
+    </tr>
+     <tr>
+      <td colspan="2"><button onclick="calculate();" style="width:80px;" value="=">=</button></td>
+        <td><button onclick="myvalue('.');"  value=".">.</button></td>
+      <td><button onclick="myvalue('%');"  value="%">%</button></td>
+    </tr>
+    
+  </tbody>
+</table>
+<script>
+  
+  function myvalue(k){
+    document.getElementById("inputbox").value += k ;
+  }
+
+  function calculate() {
+     document.getElementById("inputbox").value = eval(document.getElementById("inputbox").value) ;
+  }
+
+</script>
+ 
+
+</body>
+</html>
