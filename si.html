@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Simpal Interest</title>
+</head>
+
+<body>
+
+<input type="text" id="principal"  name="principal" value="Principal"/>
+<input type="text" id="rateofinterest"  name="rateofinterest" value="Rate of Interest"/>
+
+<input type="text" id="time"  name="time" value="time"/>
+
+<input onclick="myInterest()" type="button" id="btn" value="Get Simpal Interest" /> 
+  
+<script>
+  
+  function myInterest(k){
+    document.getElementById("principal").value += k ;
+  }
+
+  function calculate() {
+     document.getElementById("inputbox").value = eval(document.getElementById("inputbox").value) ;
+  }
+
+</script>
+ 
+
+</body>
+</html>
