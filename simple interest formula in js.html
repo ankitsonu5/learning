@@ -15,9 +15,15 @@
 <input onclick="myInterest()" type="button" id="btn" value="Get Simpal Interest" /> 
   
 <script>
+
   
   function myInterest(k){
-    document.getElementById("principal").value += k ;
+
+  	var principal = document.getElementById("principal").value;
+	var rateofinterest = document.getElementById("rateofinterest").value;
+	var time = document.getElementById("time").value;
+
+    document.getElementById("result").value=principal*rateofinterest*time/100;
   }
 
   function calculate() {
@@ -26,6 +32,8 @@
 
 </script>
  
+
+  <input type="text" id="result" >
 
 </body>
 </html>

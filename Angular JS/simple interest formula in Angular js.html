@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="myInterst">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Angular 1</title>
+	 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+<body ng-controller="maincontroler">
+
+
+<input type="text" placeholder="Principal" ng-model="principal">
+
+<input type="text" placeholder="Rate of interest" ng-model="rateofinterest">
+
+<input type="text" placeholder="Time" ng-model="time">
+
+<input type="button" value="Get Interest" ng-click="myInterst()"></button>  
+
+<h1>Your Simapal Interest is {{result}} </h1>
+
+
+<script>
+var app= angular.module("myInterst",[]);
+         app.controller("maincontroler",["$scope", function($scope){
+
+         	$scope.result=0;
+         	$scope.myInterst = function() {
+
+         		$scope.result = parseInt($scope.principal) * parseInt($scope.rateofinterest) * parseInt($scope.time) /100;
+         		console.log($scope)
+         	}
+         }]);
+
+	
+
+
+</script>
+	
+</body>
+</html>
